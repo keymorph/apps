@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    './src/**/*.{ts,tsx}'
-  ],
+  content: ["./**/*.{ts,tsx}"],
   theme: {
     extend: {
       screens: {
@@ -32,7 +30,7 @@ module.exports = {
       boxShadow: {
         strong: "0rem 1.2rem 1.2rem rgba(0, 0, 0, 0.6)",
       },
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };

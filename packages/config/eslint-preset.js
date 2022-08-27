@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+  parser: "@typescript-eslint/parser",
   extends: [
     "next",
     "next/core-web-vitals",
@@ -7,8 +9,16 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:tailwindcss/recommended",
     "plugin:import/errors",
+    "plugin:@typescript-eslint/recommended",
   ],
-  plugins: ["prettier", "react", "tailwindcss", "import", "simple-import-sort"],
+  plugins: [
+    "prettier",
+    "react",
+    "tailwindcss",
+    "import",
+    "simple-import-sort",
+    "@typescript-eslint",
+  ],
   rules: {
     "no-unused-vars": "warn",
     "prefer-const": "error",
@@ -22,5 +32,15 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
   },
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      rules: {
+        "no-undef": "off",
+      },
+    },
+  ],
 };
