@@ -1,12 +1,13 @@
-import Card from "../../SharedComponents/Card";
-import Image from "next/image";
-import Website from "../../Icons/Website";
-import Linkedin from "../../Icons/Linkedin";
-import Github from "../../Icons/Github";
 import { motion } from "framer-motion";
-import { dragSpring, spring } from "../../../styles/transitions";
+import Image from "next/image";
 import { useState } from "react";
+
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
+import { dragSpring, spring } from "../../../styles/transitions";
+import Github from "../../Icons/Github";
+import Linkedin from "../../Icons/Linkedin";
+import Website from "../../Icons/Website";
+import Card from "../../SharedComponents/Card";
 
 interface Props {
   index?: number;
@@ -15,9 +16,6 @@ interface Props {
   websiteURL: string;
   githubURL: string;
   linkedinURL: string;
-  alreadyDragging: boolean;
-  // eslint-disable-next-line no-unused-vars
-  setAlreadyDragging: (alreadyDragging: boolean) => void;
 }
 
 export default function MemberCard({
@@ -27,8 +25,6 @@ export default function MemberCard({
   websiteURL,
   githubURL,
   linkedinURL,
-  alreadyDragging,
-  setAlreadyDragging,
 }: Props) {
   //#region Hooks
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -43,7 +39,7 @@ export default function MemberCard({
 
   return (
     <motion.div
-      drag={(!alreadyDragging || draggingCard) && !isMobile}
+      drag={!isMobile}
       dragSnapToOrigin
       dragTransition={dragSpring}
       layout={!draggingCard} // Only do layout animations when not dragging
@@ -62,24 +58,20 @@ export default function MemberCard({
       }}
       custom={0.4 + index * 0.05} // Added 0.4 offset to wait for the previous page sections to transition
       onDragStart={() => {
-        setAlreadyDragging(true);
         setDraggingCard(true);
       }}
       onDragEnd={() => {
         setDraggingCard(false);
       }}
-      onDragTransitionEnd={() => {
-        setAlreadyDragging(false);
-      }}
     >
       <Card
         className={
-          "max-w-10 bg-background-dark-transparent shadow-strong min-w-[12rem] max-w-[20rem] select-none overflow-hidden"
+          "max-w-10 min-w-[12rem] max-w-[20rem] select-none overflow-hidden bg-background-dark-transparent shadow-strong"
         }
       >
         <div
           className={
-            "bg-background-darkish-transparent flex flex-row px-4 py-2"
+            "flex flex-row bg-background-darkish-transparent px-4 py-2"
           }
         >
           <p className="text-lg font-bold">{name}</p>

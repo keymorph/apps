@@ -1,14 +1,13 @@
 import { useState } from "react";
-import MemberCard from "./MemberList/MemberCard";
+
 import { Member } from "../../models";
+import MemberCard from "./MemberList/MemberCard";
 
 interface Props {
   sortedMembers: Member[];
 }
 
 export default function MemberList({ sortedMembers }: Props) {
-  const [dragging, setDragging] = useState(false);
-
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {sortedMembers.map((member, index) => (
@@ -20,8 +19,6 @@ export default function MemberList({ sortedMembers }: Props) {
           websiteURL={member.websiteURL}
           githubURL={member.githubURL}
           linkedinURL={member.linkedinURL}
-          alreadyDragging={dragging}
-          setAlreadyDragging={setDragging}
         />
       ))}
     </div>
