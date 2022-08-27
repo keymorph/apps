@@ -31,3 +31,13 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# Yarn
+.yarn-integrity
+.yarn/cache
+.yarn/install-state.gz
+
+# Webstorm
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf

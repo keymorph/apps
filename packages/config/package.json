@@ -1,16 +1,12 @@
 {
-  "name": "ui",
+  "name": "config",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "index.js",
   "license": "GPL-3.0",
-  "scripts": {
-    "lint": "eslint *.ts*"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "config": "*",
+  "files": [
+    "eslint-preset.js"
+  ],
+  "dependencies": {
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.2.5",
     "eslint-config-prettier": "^8.5.0",
@@ -19,8 +15,9 @@
     "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-tailwindcss": "^3.6.0",
     "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "tsconfig": "*",
     "typescript": "^4.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
