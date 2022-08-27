@@ -1,5 +1,5 @@
 {
-  "name": "landingpage",
+  "name": "website",
   "version": "0.2.0",
   "private": true,
   "scripts": {
@@ -25,12 +25,6 @@
     "autoprefixer": "^10.4.8",
     "config": "*",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^12.2.5",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-turbo": "^0.0.3",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.1",
-    "eslint-plugin-tailwindcss": "^3.6.0",
     "next-transpile-modules": "9.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",

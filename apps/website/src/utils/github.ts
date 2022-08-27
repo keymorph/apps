@@ -10,7 +10,6 @@ export async function getKeymorphCommitsForMembers() {
   });
 
   for (const project of projects) {
-    // Remove the last character IF and only if it is a slash
     let githubURL = project.githubURL;
 
     if (project.githubURL.endsWith("/")) {

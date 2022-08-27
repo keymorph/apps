@@ -597,6 +597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/engines@npm:4.2.1":
+  version: 4.2.1
+  resolution: "@prisma/engines@npm:4.2.1"
+  checksum: 60a13c34412d875f803fbf6452df7dd811b92f9d08e0096629841f404b14e9830ff2e487c8e462d710a1a38a6b0a202e60369d804d0251ae139376772c64f00a
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.1.3":
   version: 1.1.4
   resolution: "@rushstack/eslint-patch@npm:1.1.4"
@@ -1317,12 +1324,14 @@ __metadata:
   resolution: "config@workspace:packages/config"
   dependencies:
     eslint: ^7.32.0
-    eslint-config-next: ^12.2.5
-    eslint-config-prettier: ^8.5.0
-    eslint-config-turbo: ^0.0.3
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.31.1
-    eslint-plugin-tailwindcss: ^3.6.0
+    eslint-config-next: latest
+    eslint-config-prettier: latest
+    eslint-config-turbo: latest
+    eslint-plugin-import: latest
+    eslint-plugin-prettier: latest
+    eslint-plugin-react: latest
+    eslint-plugin-simple-import-sort: latest
+    eslint-plugin-tailwindcss: latest
     prettier: ^2.7.1
     typescript: ^4.8.2
   languageName: unknown
@@ -1828,7 +1837,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^12.2.5":
+"eslint-config-next@npm:latest":
   version: 12.2.5
   resolution: "eslint-config-next@npm:12.2.5"
   dependencies:
@@ -1851,7 +1860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.5.0":
+"eslint-config-prettier@npm:latest":
   version: 8.5.0
   resolution: "eslint-config-prettier@npm:8.5.0"
   peerDependencies:
@@ -1862,7 +1871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-turbo@npm:^0.0.3":
+"eslint-config-turbo@npm:latest":
   version: 0.0.3
   resolution: "eslint-config-turbo@npm:0.0.3"
   dependencies:
@@ -1911,7 +1920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.26.0":
+"eslint-plugin-import@npm:^2.26.0, eslint-plugin-import@npm:latest":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
   dependencies:
@@ -1957,7 +1966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^4.2.1":
+"eslint-plugin-prettier@npm:latest":
   version: 4.2.1
   resolution: "eslint-plugin-prettier@npm:4.2.1"
   dependencies:
@@ -1981,7 +1990,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.29.4, eslint-plugin-react@npm:^7.31.1":
+"eslint-plugin-react@npm:^7.29.4, eslint-plugin-react@npm:latest":
   version: 7.31.1
   resolution: "eslint-plugin-react@npm:7.31.1"
   dependencies:
@@ -2005,7 +2014,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:^3.6.0":
+"eslint-plugin-simple-import-sort@npm:latest":
+  version: 7.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:7.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 6aacb7179c213cd2081950630368d1f3b1dcb4f5674d8b989fe7839e7b317ee521d74761676e8b1a7cab49f20405dbcc9aac05358ae804e6bcba6cbf1daccb3d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-tailwindcss@npm:latest":
   version: 3.6.0
   resolution: "eslint-plugin-tailwindcss@npm:3.6.0"
   dependencies:
@@ -2980,39 +2998,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"landingpage@workspace:apps/website":
-  version: 0.0.0-use.local
-  resolution: "landingpage@workspace:apps/website"
-  dependencies:
-    "@babel/core": ^7.0.0
-    "@types/node": ^18.7.3
-    "@types/react": ^18.0.17
-    "@types/react-dom": ^18.0.6
-    autoprefixer: ^10.4.8
-    config: "*"
-    cssnano: ^5.1.13
-    eslint: ^7.32.0
-    eslint-config-next: ^12.2.5
-    eslint-config-prettier: ^8.5.0
-    eslint-config-turbo: ^0.0.3
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.31.1
-    eslint-plugin-tailwindcss: ^3.6.0
-    framer-motion: ^7.1.0
-    next: ^12.2.5
-    next-transpile-modules: 9.0.0
-    postcss: ^8.4.16
-    prettier: ^2.7.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    sharp: ^0.30.7
-    tailwindcss: ^3.1.8
-    tsconfig: "*"
-    typescript: ^4.7.4
-    ui: "*"
-  languageName: unknown
-  linkType: soft
-
 "language-subtag-registry@npm:~0.3.2":
   version: 0.3.22
   resolution: "language-subtag-registry@npm:0.3.22"
@@ -3275,6 +3260,7 @@ __metadata:
     eslint: ^7.32.0
     postcss: ^8.4.16
     prettier: ^2.7.1
+    prisma: ^4.2.1
     tailwindcss: ^3.1.8
     turbo: latest
   languageName: unknown
@@ -4134,6 +4120,18 @@ __metadata:
   bin:
     prettier: bin-prettier.js
   checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+  languageName: node
+  linkType: hard
+
+"prisma@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "prisma@npm:4.2.1"
+  dependencies:
+    "@prisma/engines": 4.2.1
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: 7f6fa164e153aa09f28f90420756831bb275a123ee0691fdd70bccee193ccc1d537cd14394cdf2ad549bb8773e06704025664948275d17f0fe4c139a470848e1
   languageName: node
   linkType: hard
 
@@ -5147,12 +5145,6 @@ __metadata:
     "@types/react-dom": ^18.0.6
     config: "*"
     eslint: ^7.32.0
-    eslint-config-next: ^12.2.5
-    eslint-config-prettier: ^8.5.0
-    eslint-config-turbo: ^0.0.3
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.31.1
-    eslint-plugin-tailwindcss: ^3.6.0
     prettier: ^2.7.1
     react: ^18.2.0
     tsconfig: "*"
@@ -5235,6 +5227,33 @@ __metadata:
   checksum: adb0a271eaa2297f2f4c536acbfee872d0dd26ec2d76f66921aa7fc437319132773483344207bdbeee169225f4739016d8d2dbf0553913a52bb34da6d0334f8e
   languageName: node
   linkType: hard
+
+"website@workspace:apps/website":
+  version: 0.0.0-use.local
+  resolution: "website@workspace:apps/website"
+  dependencies:
+    "@babel/core": ^7.0.0
+    "@types/node": ^18.7.3
+    "@types/react": ^18.0.17
+    "@types/react-dom": ^18.0.6
+    autoprefixer: ^10.4.8
+    config: "*"
+    cssnano: ^5.1.13
+    eslint: ^7.32.0
+    framer-motion: ^7.1.0
+    next: ^12.2.5
+    next-transpile-modules: 9.0.0
+    postcss: ^8.4.16
+    prettier: ^2.7.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sharp: ^0.30.7
+    tailwindcss: ^3.1.8
+    tsconfig: "*"
+    typescript: ^4.7.4
+    ui: "*"
+  languageName: unknown
+  linkType: soft
 
 "which-boxed-primitive@npm:^1.0.2":
   version: 1.0.2

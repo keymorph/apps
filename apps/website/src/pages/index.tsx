@@ -1,9 +1,9 @@
-import MainHeader from "../components/MainHeader";
 import Footer from "../components/Footer";
-import ProjectsSection from "../components/ProjectsSection";
+import MainHeader from "../components/MainHeader";
 import MembersSection from "../components/MembersSection";
-import { getKeymorphCommitsForMembers } from "../utils";
+import ProjectsSection from "../components/ProjectsSection";
 import { Member, members } from "../models";
+import { getKeymorphCommitsForMembers } from "../utils";
 
 interface Props {
   sortedMembers: Member[];
@@ -13,7 +13,7 @@ export default function Home({ sortedMembers }: Props) {
   return (
     <div
       className={
-        "text-text-primary relative min-h-screen w-screen select-none overflow-x-hidden"
+        "relative min-h-screen w-screen select-none overflow-x-hidden text-text-primary"
       }
     >
       <MainHeader />
