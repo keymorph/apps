@@ -1,1 +1,1 @@
-# 🔐 Keymorph  —  **`Monorepo`**
+# 🔐 Keymorph  —  **`Apps Monorepo`**
