@@ -1,4 +1,4 @@
-import { createContext, useLayoutEffect } from "react";
+import { createContext, useEffect, useLayoutEffect } from "react";
 
 interface Props {
   theme: Record<string, unknown>;
@@ -19,7 +19,7 @@ export const ThemeContext = createContext({
  * @returns
  */
 export default function ThemeProvider({ theme, children }: Props) {
-  useLayoutEffect(() => {
+  useEffect(() => {
     console.log("test");
     if (
       localStorage.theme === "dark" ||
@@ -30,7 +30,7 @@ export default function ThemeProvider({ theme, children }: Props) {
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [localStorage.theme]);
+  }, []);
 
   /**
    * Toggles the theme mode between light and dark. If "os" is passed, the theme mode is set to the OS theme.

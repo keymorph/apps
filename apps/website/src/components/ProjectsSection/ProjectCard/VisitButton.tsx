@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { OpenInNew } from "ui/icons";
+
 import { spring } from "../../../styles/transitions";
-import OpenInNew from "../../Icons/OpenInNew";
 
 interface Props {
   actionText: string;
@@ -19,7 +20,7 @@ export default function VisitButton({
       whileTap={{ scale: 0.96 }}
       transition={spring}
       className={
-        "group bg-background-darkish-transparent flex flex-row items-center gap-2 rounded-full px-4 py-2 text-lg sm:text-2xl"
+        "group flex flex-row items-center gap-2 rounded-full bg-background-darkish-transparent px-4 py-2 text-lg sm:text-2xl"
       }
       href={projectURL}
       target={"_blank"}
@@ -28,7 +29,7 @@ export default function VisitButton({
     >
       <div
         className={
-          "text-text-secondary group-hover:text-text-primary transition-colors duration-200 ease-in-out"
+          "text-text-secondary transition-colors duration-200 ease-in-out group-hover:text-text-primary"
         }
       >
         {actionText}&nbsp;
@@ -38,7 +39,7 @@ export default function VisitButton({
       </div>
       <OpenInNew
         className={
-          "fill-text-secondary group-hover:fill-text-primary transition-fill w-4 duration-200 ease-in-out sm:w-6"
+          "transition-fill w-4 fill-text-secondary duration-200 ease-in-out group-hover:fill-text-primary sm:w-6"
         }
       />
     </motion.a>

@@ -1,15 +1,16 @@
-import { dragSpring, spring, springShort } from "../../styles/transitions";
 import { AnimatePresence, motion } from "framer-motion";
-import Card from "../SharedComponents/Card";
-import VisitButton from "./ProjectCard/VisitButton";
-import Info from "../Icons/Info";
 import Image from "next/image";
-import PrevNextControls from "./ProjectCard/PrevNextControls";
+import { Info } from "ui/icons";
+
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { dragSpring, spring, springShort } from "../../styles/transitions";
 import {
   projectCardPrevNextVariants,
   slideDirectionalVariants,
 } from "../../styles/variants";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+import Card from "../SharedComponents/Card";
+import PrevNextControls from "./ProjectCard/PrevNextControls";
+import VisitButton from "./ProjectCard/VisitButton";
 
 interface Props {
   actionText: string;
@@ -93,20 +94,21 @@ export default function ProjectCard({
             "w-full max-w-[32rem] select-none overflow-hidden bg-background-dark-transparent shadow-strong sm:min-w-[32rem]"
           }
         >
-          <motion.div
-            initial={initialContentDirection}
-            animate={"visible"}
-            custom={direction > 0 ? 0 : 0.15}
-            variants={slideDirectionalVariants}
-            className={"relative flex flex-row justify-between p-4"}
-          >
-            <VisitButton
-              actionText={actionText}
-              projectName={projectName}
-              projectURL={projectURL}
-            />
+          <div className={"relative flex flex-row justify-between p-4"}>
+            <motion.div
+              initial={initialContentDirection}
+              animate={"visible"}
+              custom={direction > 0 ? 0 : 0.15}
+              variants={slideDirectionalVariants}
+            >
+              <VisitButton
+                actionText={actionText}
+                projectName={projectName}
+                projectURL={projectURL}
+              />
+            </motion.div>
             <PrevNextControls current={current} setCurrent={setCurrent} />
-          </motion.div>
+          </div>
           <motion.div
             initial={initialContentDirection}
             animate={"visible"}
@@ -131,6 +133,7 @@ export default function ProjectCard({
             className={"text-md p-4 text-center md:text-lg lg:text-xl"}
           >
             <Info
+              variant={"filled"}
               className={
                 "mr-2 inline-block w-5 fill-text-primary md:mr-4 md:w-6"
               }

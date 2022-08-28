@@ -1,11 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { wrap } from "popmotion";
-import ProjectCard from "./ProjectsSection/ProjectCard";
+import { useState } from "react";
+import { ViewCarousel } from "ui/icons";
+
+import { projects } from "../models";
 import { spring } from "../styles/transitions";
 import { slideDirectionalVariants } from "../styles/variants";
-import { projects } from "../models";
-import Carousel from "./Icons/Carousel";
+import ProjectCard from "./ProjectsSection/ProjectCard";
 
 export default function ProjectsSection() {
   const [[current, direction], setCurrent] = useState([0, 1]);
@@ -22,7 +23,7 @@ export default function ProjectsSection() {
       className="flex flex-col p-8"
     >
       <h6 className="mb-4 flex flex-row items-center gap-2 text-lg sm:text-2xl">
-        <Carousel className={"fill-text-primary w-8 md:w-12"} />
+        <ViewCarousel className={"w-10 fill-text-primary md:w-12"} />
         Our projects
       </h6>
       <motion.div

@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { Github, Home, Linkedin } from "ui/icons";
 
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 import { dragSpring, spring } from "../../../styles/transitions";
-import Github from "../../Icons/Github";
-import Linkedin from "../../Icons/Linkedin";
-import Website from "../../Icons/Website";
 import Card from "../../SharedComponents/Card";
 
 interface Props {
@@ -35,7 +33,7 @@ export default function MemberCard({
     (url) => url !== ""
   );
   const clickableLinkClassName =
-    "w-10 fill-text-secondary hover:fill-text-primary transition-fill duration-200 ease-in-out";
+    "fill-text-secondary hover:fill-text-primary transition-fill duration-200 ease-in-out";
 
   return (
     <motion.div
@@ -88,7 +86,7 @@ export default function MemberCard({
               draggable={false}
             />
           </div>
-          <div className={"flex flex-col gap-4"}>
+          <div className={"flex flex-col items-center gap-5"}>
             {clickableLinks.map((link, index) => (
               <motion.a
                 key={index}
@@ -101,13 +99,16 @@ export default function MemberCard({
                 style={{ display: "flex" }}
               >
                 {link === websiteURL && (
-                  <Website className={clickableLinkClassName} />
+                  <Home
+                    variant={"filled"}
+                    className={"w-10 h-10 -mb-1 " + clickableLinkClassName}
+                  />
                 )}
                 {link === githubURL && (
-                  <Github className={clickableLinkClassName} />
+                  <Github className={"w-8 h-8 " + clickableLinkClassName} />
                 )}
                 {link === linkedinURL && (
-                  <Linkedin className={clickableLinkClassName} />
+                  <Linkedin className={"w-8 h-8 " + clickableLinkClassName} />
                 )}
               </motion.a>
             ))}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { ArrowBack, ArrowForward } from "ui/icons";
+
 import { spring } from "../../../styles/transitions";
-import Arrow from "../../Icons/Arrow";
 
 interface Props {
   current: number;
@@ -13,7 +14,7 @@ export default function PrevNextControls({ current, setCurrent }: Props) {
   };
 
   const arrowStyles =
-    "w-8 md:w-10 fill-text-secondary group-hover:fill-text-primary transition-colors duration-200 ease-in-out";
+    "w-8 md:w-12 h-8 md:h-12 fill-text-secondary group-hover:fill-text-primary transition-colors duration-200 ease-in-out";
 
   return (
     <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
@@ -24,7 +25,7 @@ export default function PrevNextControls({ current, setCurrent }: Props) {
         onClick={() => paginate(-1)}
         className={"group"}
       >
-        <Arrow className={arrowStyles + " rotate-0 xl:rotate-90"} />
+        <ArrowForward className={arrowStyles + " -rotate-180 xl:-rotate-90"} />
       </motion.button>
       <motion.button
         transition={spring}
@@ -33,7 +34,7 @@ export default function PrevNextControls({ current, setCurrent }: Props) {
         onClick={() => paginate(1)}
         className={"group"}
       >
-        <Arrow className={arrowStyles + " rotate-180 xl:-rotate-90"} />
+        <ArrowBack className={arrowStyles + " rotate-180 xl:-rotate-90"} />
       </motion.button>
     </div>
   );

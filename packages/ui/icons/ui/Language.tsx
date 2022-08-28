@@ -1,6 +1,6 @@
-import { SVGProps } from "react";
+import { IconProps } from "../type";
 
-export default function Website(props: SVGProps<SVGSVGElement>) {
+export default function Language({ variant, ...props }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
