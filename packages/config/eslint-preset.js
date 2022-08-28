@@ -42,5 +42,11 @@ module.exports = {
         "no-undef": "off",
       },
     },
+    {
+      files: ["*.js", "*.jsx"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
   ],
 };
