@@ -3,6 +3,7 @@ import NextAuth from "next-auth";
 import CredentialProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+
 import { createOAuthUserIfNotExists } from "../../../api/services/oauth-user";
 
 /*
@@ -37,6 +38,7 @@ export const authOptions = {
           });
         // user will be undefined if the credentials are invalid
         // If we have user data, return it
+
         return user?.data;
       },
     }),
@@ -46,20 +48,20 @@ export const authOptions = {
     async jwt({ token, user }) {
       if (user && !user.user_id) {
         // Temporary cosmosdb solution for getting the user id and/or creating an account for oauth users
-        token.user_id = await createOAuthUserIfNotExists(user.email).catch(
+        token.userId = await createOAuthUserIfNotExists(user.email).catch(
           (error) => {
             console.error(error.message);
           }
         );
       } else if (user) {
         token.email = user.email;
-        token.user_id = user.user_id;
+        token.userId = user.userId;
       }
       return token;
     },
     async session({ session, token }) {
       if (token) {
-        session.user.id = token.user_id;
+        session.user.id = token.userId;
         session.user.email = token.email;
       }
       return session;

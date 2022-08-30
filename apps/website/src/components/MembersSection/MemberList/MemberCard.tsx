@@ -87,9 +87,9 @@ export default function MemberCard({
             />
           </div>
           <div className={"flex flex-col items-center gap-5"}>
-            {clickableLinks.map((link, index) => (
+            {clickableLinks.map((link, idx) => (
               <motion.a
-                key={index}
+                key={idx}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={spring}
