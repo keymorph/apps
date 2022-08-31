@@ -10,6 +10,7 @@ export async function getUrlFromSlug(
   slug: string
 ): Promise<string | undefined | null> {
   const links = await getContainer("links");
+
   return links
     .item(slug, slug)
     .read()

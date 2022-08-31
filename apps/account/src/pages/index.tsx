@@ -8,11 +8,11 @@ export default function Index() {
   return (
     <div
       className={
-        "flex flex-col overflow-hidden justify-center items-center bg-background-darker w-screen h-screen"
+        "flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-background-darker"
       }
     >
       <h1
-        className={"absolute font-bold text-center text-primary-light text-2xl"}
+        className={"absolute text-center text-2xl font-bold text-primary-light"}
       >
         Soon™
       </h1>

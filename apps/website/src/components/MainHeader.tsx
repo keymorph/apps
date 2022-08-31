@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { spring } from "../styles/transitions";
 import { useEffect, useState } from "react";
+
+import { spring } from "../styles/transitions";
 import { slideDirectionalVariants } from "../styles/variants";
 
 export default function MainHeader() {
@@ -32,7 +33,7 @@ export default function MainHeader() {
         initial={"hiddenLeft"}
         animate={"visible"}
         custom={0.1}
-        className="text-primary text-5xl font-bold md:text-6xl lg:text-8xl"
+        className="text-5xl font-bold text-primary md:text-6xl lg:text-8xl"
       >
         Keymorph
       </motion.h1>

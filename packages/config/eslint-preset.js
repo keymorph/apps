@@ -28,12 +28,14 @@ module.exports = {
     "no-empty-function": "error",
     "no-duplicate-imports": "error",
     "newline-after-var": "error",
-    camelcase: "error",
+    camelcase: "warn",
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": "off", // Already handled by eslint:recommended
+    "@typescript-eslint/no-empty-function": "off", // Already handled by eslint:recommended
   },
   overrides: [
     {

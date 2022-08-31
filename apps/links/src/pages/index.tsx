@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <div
       className={
-        "flex flex-col overflow-hidden justify-center items-center bg-background-darker w-screen h-screen"
+        "flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-background-darker"
       }
     >
       <motion.h1
@@ -26,7 +26,7 @@ export default function Index() {
         dragSnapToOrigin
         whileDrag={{ cursor: "grabbing" }}
         className={
-          "absolute w-4/5 md:w-1/2 font-bold text-center text-primary text-2xl cursor-grab z-10"
+          "absolute z-10 w-4/5 cursor-grab text-center text-2xl font-bold text-primary md:w-1/2"
         }
       >
         Nothing to see here.
@@ -42,7 +42,7 @@ export default function Index() {
             duration: 1,
           },
         }}
-        className={"border-primary rounded-full"}
+        className={"rounded-full border-primary"}
       />
     </div>
   );

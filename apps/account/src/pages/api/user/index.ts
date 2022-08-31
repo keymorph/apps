@@ -3,10 +3,11 @@
 */
 
 // Handle incoming requests
-import { deleteUser, loginUser, registerUser } from "../../../services/user";
-import { unstable_getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]";
 import { NextApiRequest, NextApiResponse } from "next";
+import { unstable_getServerSession } from "next-auth";
+
+import { deleteUser, loginUser, registerUser } from "../../../services/user";
+import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(
   req: NextApiRequest,

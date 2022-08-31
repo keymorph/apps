@@ -1,5 +1,11 @@
-export async function loginUser(email) {}
+export async function loginUser(email) {
+  return null;
+}
 
-export async function registerUser(email) {}
+export async function registerUser(email) {
+  return null;
+}
 
-export async function deleteUser(userId) {}
+export async function deleteUser(userId) {
+  return null;
+}

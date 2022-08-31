@@ -30,6 +30,7 @@ export async function getStaticProps(context: { params: { slugs: string[] } }) {
   }
 
   const slug = slugs[0] || "";
+
   return await getUrlFromSlug(slug)
     .then((url) => {
       if (url) {

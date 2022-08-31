@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import { spring } from "../styles/transitions";
 import { slideDirectionalVariants } from "../styles/variants";
 
