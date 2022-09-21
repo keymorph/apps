@@ -11,29 +11,27 @@
   "dependencies": {
     "@azure/cosmos": "3.16.4",
     "cssnano": "^5.1.13",
-    "framer-motion": "^7.2.1",
-    "next": "^12.2.5",
+    "framer-motion": "^7.3.6",
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.30.7",
-    "ui": "*"
+    "sharp": "^0.31.0",
+    "ui": "workspace:^"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@types/node": "^18.7.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "autoprefixer": "^10.4.8",
-    "config": "*",
-    "eslint": "8.22.0",
-    "eslint-config-next": "^12.2.5",
-    "eslint-config-prettier": "^8.5.0",
-    "next-transpile-modules": "9.0.0",
+    "autoprefixer": "^10.4.12",
+    "config": "workspace:^",
+    "eslint": "^8.23.1",
+    "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8",
-    "tsconfig": "*",
-    "typescript": "^4.8.2"
+    "tsconfig": "workspace:^",
+    "typescript": "^4.8.3"
   },
   "browserslist": {
     "production": [
